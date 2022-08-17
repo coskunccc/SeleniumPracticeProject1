@@ -16,7 +16,7 @@ public class Task1_TitleVerification {
         String expectedTitle= "Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos";
 
         if (currentTitle.equals(expectedTitle)) System.out.println("Title is as expected, PASSED");
-        else System.out.println("Title is diferent than expected, FAILED");
+        else System.out.println("Title is different than expected, FAILED");
 
 
     }
