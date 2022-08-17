@@ -2,6 +2,7 @@ package com.cydeo.Day02_locations_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,12 +27,15 @@ Expected: Title should start with “apple” word
         WebElement searchBox=driver.findElement(By.name("q"));
         searchBox.sendKeys("apple");
         searchBox.submit();
+       // searchBox.sendKeys("apple"+ Keys.ENTER); also works
 
         String title=driver.getTitle();
-        String expectedTitle="apple";
+        String expectedInTitle="apple";
 
-        if (title.contains(expectedTitle))
+        if (title.contains(expectedInTitle))
             System.out.println("title contains 'apple' search VERIFIED, PASSED!");
         else System.out.println("search FAILED!!!");
+
+        // if (title.startsWith(expectedInTitle)).... also works
     }
 }
