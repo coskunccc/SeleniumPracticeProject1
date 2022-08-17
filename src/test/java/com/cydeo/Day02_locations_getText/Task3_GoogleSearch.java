@@ -14,7 +14,7 @@ public class Task3_GoogleSearch {
 1- Open a chrome browser
 2- Go to: https://google.com
 3- Write “apple” in search box
-4- Click google search button
+4- Click google search button (instead of click use Keys.ENTER)
 5- Verify title:
 Expected: Title should start with “apple” word
          */
