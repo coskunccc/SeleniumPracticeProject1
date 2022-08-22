@@ -1,4 +1,4 @@
-package com.cydeo.Day02_locations_getText;
+package com.cydeo.Tests.Day02_locations_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
