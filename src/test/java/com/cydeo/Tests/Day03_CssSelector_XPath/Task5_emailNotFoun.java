@@ -42,13 +42,13 @@ public class Task5_emailNotFoun {
         //WebElement resetButton= driver.findElement(By.cssSelector("button[value='Reset password']"));
 
         //WebElement resetButton= driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[4]/button"));
-                                                                          //*[@id="login-popup"]/form/div[4]/button
+                                                               //*[@id="login-popup"]/form/div[4]/button
 
         resetButton.click();
 
         //WebElement errorText=driver.findElement(By.cssSelector("div.errortext"));
         //WebElement errorText=driver.findElement(By.xpath("//div[@class='errortext']"));
-        WebElement errorText=driver.findElement(By.xpath("//div[.='Login or E-mail not found']"));
+        WebElement errorText=driver.findElement(By.xpath("//div[text()='Login or E-mail not found']"));
 
         String actualErrorText=errorText.getText();
         String expectedErrorText="Login or E-mail not found";
