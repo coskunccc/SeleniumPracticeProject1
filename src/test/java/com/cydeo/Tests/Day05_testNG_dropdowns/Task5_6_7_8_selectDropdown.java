@@ -24,10 +24,10 @@ public class Task5_6_7_8_selectDropdown {
         driver.get("http://practice.cybertekschool.com/dropdown");
     }
 
-    @AfterMethod
-    public void tearDownMethod(){
-        driver.close();
-    }
+    //@AfterMethod
+    //public void tearDownMethod(){
+    //    driver.close();
+    //}
 
     @Test
     public void testState(){
@@ -115,27 +115,39 @@ public class Task5_6_7_8_selectDropdown {
 
          */
 
-      Select langSelect=new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
-      for (int i = 0; i < 6; i++) {
-          langSelect.selectByIndex(i);
-          Thread.sleep(1000);
-      }
-      List<WebElement> allSelected=langSelect.getAllSelectedOptions();
-      for (WebElement each : allSelected) {
-          System.out.println( each.getText());
-      }
+        Select langSelect = new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
+        for (int i = 0; i < 6; i++) {
+            langSelect.selectByIndex(i);
+            Thread.sleep(1000);
+        }
+        List<WebElement> allSelected = langSelect.getAllSelectedOptions();
+        for (WebElement each : allSelected) {
+            System.out.println(each.getText());
 
-      langSelect.deselectAll();
+            langSelect.deselectAll();
+            Thread.sleep(1000);
+
+        /* Alternative way:
+            First find all options by findElements() method.
+            Then using for each loop click and chose them, and print them.
+            Then deselect bey Select langSelect element.(can be deselected by clicking in loop too)
+
+
+        List<WebElement> languages = driver.findElements(By.xpath("//select[@name='Languages']/option"));
+        for (WebElement each : languages) {
+            each.click();
+            System.out.println(each.getText());
+            Thread.sleep(1000);
+        }
+        Select langSelect = new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
+        langSelect.deselectAll();
         Thread.sleep(1000);
-
-        /*       THE LANGUAGES CAN BE CHOSEN AND PRINTED AS FALLOWING
-       List<WebElement> languages=driver.findElements(By.xpath("//select[@name='Languages']/option"));
-       for (WebElement each : languages) {
-           System.out.println(each.getText());
 
          */
 
-       }
+
+        }
     }
+}
 
 
