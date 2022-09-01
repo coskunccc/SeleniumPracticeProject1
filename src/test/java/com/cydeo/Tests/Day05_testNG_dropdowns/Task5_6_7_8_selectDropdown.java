@@ -122,7 +122,7 @@ public class Task5_6_7_8_selectDropdown {
         }
         List<WebElement> allSelected = langSelect.getAllSelectedOptions();
         for (WebElement each : allSelected) {
-            System.out.println(each.getText());
+            System.out.println(each.getText());}
 
             langSelect.deselectAll();
             Thread.sleep(1000);
@@ -148,6 +148,6 @@ public class Task5_6_7_8_selectDropdown {
 
         }
     }
-}
+
 
 
