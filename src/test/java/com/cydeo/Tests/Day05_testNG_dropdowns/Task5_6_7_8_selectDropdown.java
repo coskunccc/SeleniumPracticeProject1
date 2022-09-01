@@ -24,10 +24,10 @@ public class Task5_6_7_8_selectDropdown {
         driver.get("http://practice.cybertekschool.com/dropdown");
     }
 
-    //@AfterMethod
-    //public void tearDownMethod(){
-    //    driver.close();
-    //}
+    @AfterMethod
+    public void tearDownMethod(){
+        driver.close();
+    }
 
     @Test
     public void testState(){
