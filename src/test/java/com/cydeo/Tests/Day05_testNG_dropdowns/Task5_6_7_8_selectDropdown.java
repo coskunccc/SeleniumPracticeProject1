@@ -91,7 +91,7 @@ public class Task5_6_7_8_selectDropdown {
         2. Go to https://practice.cydeo.com/dropdown
         3. Click to non-select dropdown
         4. Select Facebook from dropdown
-        5. Verify title is “Facebook - Log In or Sign Up”
+        5. Verify title is “Facebook - log in or sign up”
 
          */
         WebElement dropdownLink=driver.findElement(By.cssSelector("a#dropdownMenuLink"));
@@ -100,7 +100,7 @@ public class Task5_6_7_8_selectDropdown {
         WebElement browser=driver.findElement(By.xpath("//a[.='Facebook']"));
         browser.click();
         String actualTitle=driver.getTitle();
-        String expectedTitle="Facebook - Log In or Sign Up";
+        String expectedTitle="Facebook – log in or sign up";
         Assert.assertEquals(actualTitle,expectedTitle);
     }
     @Test
