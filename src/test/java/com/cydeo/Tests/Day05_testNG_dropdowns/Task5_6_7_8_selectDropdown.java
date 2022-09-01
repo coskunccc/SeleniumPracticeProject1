@@ -115,18 +115,27 @@ public class Task5_6_7_8_selectDropdown {
 
          */
 
-        //List<WebElement> languages=driver.findElements(By.xpath("//select[@name='Languages']/option"));
-        Select langSelect=new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
-        for (int i = 0; i < 6; i++) {
-            langSelect.selectByIndex(i);
-            Thread.sleep(1000);
-        }
-        List<WebElement> allSelected=langSelect.getAllSelectedOptions();
-        for (WebElement each : allSelected) {
-            System.out.println( each.getText());
-        }
-        langSelect.deselectAll();
+      Select langSelect=new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
+      for (int i = 0; i < 6; i++) {
+          langSelect.selectByIndex(i);
+          Thread.sleep(1000);
+      }
+      List<WebElement> allSelected=langSelect.getAllSelectedOptions();
+      for (WebElement each : allSelected) {
+          System.out.println( each.getText());
+      }
 
+      langSelect.deselectAll();
+        Thread.sleep(1000);
+
+        /*       THE LANGUAGES CAN BE CHOSEN AND PRINTED AS FALLOWING
+       List<WebElement> languages=driver.findElements(By.xpath("//select[@name='Languages']/option"));
+       for (WebElement each : languages) {
+           System.out.println(each.getText());
+
+         */
+
+       }
     }
 
-}
+
