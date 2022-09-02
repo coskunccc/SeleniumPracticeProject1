@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -73,7 +74,7 @@ public class Task5_6_7_8_selectDropdown {
 
         String selectedYear=yearDropdown.getFirstSelectedOption().getText();
         String expectedYear="1923";
-        Assert.assertTrue(selectedYear.equals(expectedYear));
+        Assert.assertEquals(selectedYear,expectedYear);
 
         String selectedMonth=monthDropdown.getFirstSelectedOption().getText();
         String expectedMonth="December";
@@ -81,7 +82,7 @@ public class Task5_6_7_8_selectDropdown {
 
         String selectedDay=dayDropdown.getFirstSelectedOption().getText();
         String expectedDay="1";
-        Assert.assertEquals(selectedDay,expectedDay);
+        Assert.assertTrue(selectedDay.equals(expectedDay));
     }
     @Test
     public void testWebsite(){
@@ -114,7 +115,18 @@ public class Task5_6_7_8_selectDropdown {
         5. Deselect all values.
 
          */
+        Select langSelect = new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
+        List<WebElement> options=langSelect.getOptions();
+        for (WebElement option : options) {
+            option.click();
+            System.out.println(option.getText());
+            Thread.sleep(1000);
+        }
+        langSelect.deselectAll();
+        Thread.sleep(1000);
 
+
+        /*             ALTERNATIVE WAY SELECT BY INDEX METHOD
         Select langSelect = new Select(driver.findElement(By.cssSelector("select[name='Languages']")));
         for (int i = 0; i < 6; i++) {
             langSelect.selectByIndex(i);
@@ -125,10 +137,12 @@ public class Task5_6_7_8_selectDropdown {
             System.out.println(each.getText());}
 
             langSelect.deselectAll();
-            Thread.sleep(1000);
+            Thread.sleep(1000)
 
-        /* Alternative way:
-            First find all options by findElements() method.
+         */
+
+        /*                     ALTERNATIVE WAY
+            First find all options by findElements() method-FROM PARENT TO CHILDS
             Then using for each loop click and chose them, and print them.
             Then deselect bey Select langSelect element.(can be deselected by clicking in loop too)
 
@@ -144,7 +158,6 @@ public class Task5_6_7_8_selectDropdown {
         Thread.sleep(1000);
 
          */
-
 
         }
     }
