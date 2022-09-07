@@ -28,9 +28,10 @@ public class Task4_iframe {
         driver.get("https://practice.cydeo.com/iframe");
 
         WebElement iframe=driver.findElement(By.cssSelector("iframe#mce_0_ifr"));
+        driver.switchTo().frame(iframe);
         // WE CAN DIRECTLY PUT id "mce_0_ifr" to switch to iframe as ;
         // driver.switchTo().frame("mce_0_ifr");
-        driver.switchTo().frame(iframe);
+        // OR   We can put the index of iframe -- driver.switchTo().frame(0);
 
         WebElement contentGoesHere=driver.findElement(By.xpath("//p[.='Your content goes here.']"));
         Assert.assertTrue(contentGoesHere.isDisplayed(), "Your contene is here is not displayed");
