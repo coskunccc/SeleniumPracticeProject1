@@ -1,4 +1,4 @@
-package com.cydeo.Tests.Day6_alerts_windows;
+package com.cydeo.Tests.Day06_alerts_windows;
 
 import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package com.cydeo.Tests.Day6_alerts_windows;
+package com.cydeo.Tests.Day06_alerts_windows;
 
 import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.Set;
 
 public class Task5_window {
 

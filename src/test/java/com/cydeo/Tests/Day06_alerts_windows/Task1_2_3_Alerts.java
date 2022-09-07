@@ -1,16 +1,10 @@
-package com.cydeo.Tests.Day6_alerts_windows;
+package com.cydeo.Tests.Day06_alerts_windows;
 
-import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class Task1_2_3_Alerts extends Parent {
 
