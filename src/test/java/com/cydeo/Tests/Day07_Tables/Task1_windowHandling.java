@@ -1,6 +1,7 @@
 package com.cydeo.Tests.Day07_Tables;
 
 import com.cydeo.Tests.Day06_alerts_windows.Parent;
+import com.cydeo.Utilities.BrowserUtils;
 import com.cydeo.Utilities.WebDriverFactory;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.JavascriptExecutor;
@@ -65,7 +66,6 @@ public class Task1_windowHandling{
             }
         }
         Assert.assertTrue(driver.getTitle().contains("Etsy"));
-
          }
 
 }
