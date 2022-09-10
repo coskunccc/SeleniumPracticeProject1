@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Task1_2_3_Alerts extends Parent {
+public class Task1_2_3_Alerts extends ParentAlerts {
 
 
     @Test

@@ -49,9 +49,9 @@ public class Task5_6_7_8_selectDropdown {
         stateDropdown.selectByVisibleText("Illinois");
         stateDropdown.selectByValue("VA");
         stateDropdown.selectByIndex(5);
-        String lastSeledted=stateDropdown.getFirstSelectedOption().getText();
+        String lastSelecdted=stateDropdown.getFirstSelectedOption().getText();
         String expectedLastSelected="California";
-        Assert.assertEquals(lastSeledted,expectedLastSelected);
+        Assert.assertEquals(lastSelecdted,expectedLastSelected);
     }
     @Test
     public void testBirthday(){

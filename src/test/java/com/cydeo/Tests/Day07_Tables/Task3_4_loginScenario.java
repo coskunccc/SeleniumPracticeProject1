@@ -1,7 +1,5 @@
 package com.cydeo.Tests.Day07_Tables;
 
-import com.cydeo.Utilities.BrowserUtils;
-import com.cydeo.Utilities.CrmUtils;
 import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

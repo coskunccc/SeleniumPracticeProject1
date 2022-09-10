@@ -1,4 +1,4 @@
-package com.cydeo.Utilities;
+package com.cydeo.Tests.Day07_Tables;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

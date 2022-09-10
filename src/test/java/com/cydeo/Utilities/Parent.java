@@ -1,6 +1,5 @@
-package com.cydeo.Tests.Day06_alerts_windows;
+package com.cydeo.Utilities;
 
-import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +14,6 @@ public class Parent {
         driver= WebDriverFactory.getDriver("chrome");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
-        driver.get("http://practice.cydeo.com/javascript_alerts");
     }
     @AfterMethod
     public void tearDownMethod(){
