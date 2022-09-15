@@ -1,5 +1,7 @@
 package com.cydeo.Tests.Day08_tables_cont;
 
+import com.cydeo.Utilities.ConfigurationReader;
+import com.cydeo.Utilities.Driver;
 import com.cydeo.Utilities.Parent;
 import com.cydeo.Utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,9 +17,10 @@ import java.time.Duration;
 public class Task4_ReadFromFile {
     @Test
     public void search() throws InterruptedException {
-        String browser=ConfigurationReader.getProperty("browser");
-       WebDriver driver= WebDriverFactory.getDriver(browser);
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+//        String browser= ConfigurationReader.getProperty("browser");
+//       WebDriver driver= WebDriverFactory.getDriver(browser);
+//       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        WebDriver driver= Driver.getDriver();
 
        String searchWord=ConfigurationReader.getProperty("searchWord");
        driver.get("https://google.com");
