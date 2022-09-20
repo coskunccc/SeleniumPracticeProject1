@@ -22,7 +22,7 @@ public class TestNG_Selenium {
    //}
     @BeforeMethod
     public void setUpMehtod(){
-        driver= WebDriverFactory.getDriver("chrome");
+        driver= WebDriverFactory.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }

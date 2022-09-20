@@ -23,7 +23,7 @@ public class Task5_window {
         7. Assert: Title is “New Window”
 
          */
-        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        WebDriver driver= WebDriverFactory.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 

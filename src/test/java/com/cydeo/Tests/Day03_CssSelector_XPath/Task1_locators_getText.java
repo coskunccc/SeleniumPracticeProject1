@@ -25,7 +25,7 @@ public class Task1_locators_getText {
          */
         //WebDriverManager.chromedriver().setup();
         //WebDriver driver=new ChromeDriver();
-        WebDriver driver=WebDriverFactory.getDriver("chrome");
+        WebDriver driver=WebDriverFactory.getDriver();
         driver.manage().window().maximize();
 
         driver.get("https://login1.nextbasecrm.com");

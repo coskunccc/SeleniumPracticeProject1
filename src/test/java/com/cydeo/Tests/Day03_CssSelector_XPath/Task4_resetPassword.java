@@ -17,7 +17,7 @@ public class Task4_resetPassword {
                 PS2: Pay attention to where to get the text of this button from
 
          */
-        WebDriver driver= WebDriverFactory.getDriver("firefox");
+        WebDriver driver= WebDriverFactory.getDriver();
         driver.manage().window().maximize();
 
         driver.get("https://login1.nextbasecrm.com/?forgot_password=yes");

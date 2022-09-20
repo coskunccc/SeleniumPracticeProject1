@@ -21,7 +21,7 @@ public class Task2_getText_getAttribute {
 
          */
 
-        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        WebDriver driver= WebDriverFactory.getDriver();
         driver.manage().window().maximize();
 
         driver.get("https://login1.nextbasecrm.com/");

@@ -27,7 +27,7 @@ public class Task1_xpath_cssSelector {
         XPATH locator if possible
 
          */
-        WebDriver driver=WebDriverFactory.getDriver("chrome");
+        WebDriver driver=WebDriverFactory.getDriver();
         driver.manage().window().maximize();
 
         driver.get("https://practice.cydeo.com/forgot_password");

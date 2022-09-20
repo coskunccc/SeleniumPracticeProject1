@@ -18,7 +18,7 @@ public class Task3_LoginText {
 
          */
 
-        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        WebDriver driver= WebDriverFactory.getDriver();
         driver.manage().window().maximize();
 
         driver.get("https://login1.nextbasecrm.com/");

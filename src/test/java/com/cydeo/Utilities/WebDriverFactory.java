@@ -12,17 +12,21 @@ import java.util.List;
 import java.util.Set;
 
 public class WebDriverFactory {
-    public static WebDriver getDriver(String browserType) {
-        browserType = browserType.toLowerCase();
-        if (browserType.contains("chrome")) {
+    public static WebDriver getDriver() {
+        // browserType = browserType.toLowerCase();
+
+        // taking browser type from configuration file
+        String browserType=ConfigurationReader.getProperty("browser");
+
+       if (browserType.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
 
-        } else if (browserType.contains("firefox")) {
+        } else if (browserType.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }
-          else if (browserType.contains("edge")){
+          else if (browserType.equals("edge")){
               WebDriverManager.edgedriver().setup();
               return new EdgeDriver();
         }

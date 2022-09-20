@@ -19,23 +19,22 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
-                    driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
                     break;
                 case "firefox":
                     WebDriverManager.chromedriver().setup();
                     driver=new FirefoxDriver();
-                    driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
                     break;
                 case "edge":
                     WebDriverManager.chromedriver().setup();
                     driver=new EdgeDriver();
-                    driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
                     break;
             }
         }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;
     }
     public static void closeDriver(){
