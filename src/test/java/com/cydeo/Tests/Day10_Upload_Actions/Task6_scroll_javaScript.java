@@ -36,6 +36,7 @@ public class Task6_scroll_javaScript {
     @Test
     public void scroolAndFind(){
     //  goes to amazon.com.tr, scrolls to the bottom till it finds "Japonya" and clicks it
+        // we use javascriptexecuter here
 
         driver.get("https://www.amazon.com.tr");
         WebElement japon=driver.findElement(By.xpath("//a[.='Japonya']\n"));
@@ -43,4 +44,5 @@ public class Task6_scroll_javaScript {
         driver.findElement(By.id("sp-cc-accept")).click();// clics to cerezleri kabul et
         js.executeScript("arguments[0].scrollIntoView(true);"+"arguments[0].click()",japon);
     }
+
 }
