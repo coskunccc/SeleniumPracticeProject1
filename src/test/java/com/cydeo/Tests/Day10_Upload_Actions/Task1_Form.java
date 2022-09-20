@@ -51,7 +51,7 @@ Note:
         Select select = new Select(driver.findElement(By.name("department")));
         select.selectByVisibleText("Accounting Office");
         Select select1 = new Select(driver.findElement(By.name("job_title")));
-        select1.selectByIndex(4);
+        select1.selectByIndex(faker.number().numberBetween(1,9));
         driver.findElement(By.cssSelector("#inlineCheckbox2")).click();
         driver.findElement(By.xpath("//button[@id='wooden_spoon']")).click();
         driver.findElement(By.xpath("//p[.=\"You've successfully completed registration!\"]")).isDisplayed();
